@@ -154,6 +154,10 @@ a {
     margin-bottom: 1rem;
 }
 
+.list--tick .empty {
+    visibility: hidden;
+}
+
 @media screen and (min-width: 1024px) {
     .list--tick .list__item {
         padding-left: 0;
@@ -331,10 +335,21 @@ a {
     background-color: #02cdf1;
 }
 
+.card--primary .badge--primary {
+    background-color: #126de4;
+}
+
 
 /* Plans */
+.plan {
+    transition: transform 0.2s ease-out;
+}
 .plan--popular .card__header {
     position: relative;
+}
+
+.plan--popular {
+    transform: scale(1.1);
 }
 
 .plan--popular .card__header::before {
@@ -373,6 +388,14 @@ a {
 
 .plan .list__item {
     margin-bottom: 2rem;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan--popular:hover {
+    transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -732,5 +755,21 @@ a {
 @media screen and (min-width: 768px) {
     .domain-block__prices {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+}
+
+.block-plans .grid {
+    gap: 8rem 4rem;
+}
+
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .plan-block {
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+        gap: 4rem;
     }
 }

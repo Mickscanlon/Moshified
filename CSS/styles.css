@@ -837,6 +837,9 @@ a {
     width: 100%;
 }
 
+.block-showcase .grid {
+    gap: 0 3rem;
+}
 
 @media screen and (min-width: 768px) {
     .block-showcase .grid {
